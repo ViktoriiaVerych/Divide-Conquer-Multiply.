@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
       "projectName": "Conquer the second",
-      "projectPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
+      "projectPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer the second\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
