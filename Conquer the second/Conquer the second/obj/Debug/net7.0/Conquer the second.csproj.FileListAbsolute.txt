@@ -3,3 +3,13 @@ C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conqu
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.AssemblyInfoInputs.cache
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.AssemblyInfo.cs
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.csproj.CoreCompileInputs.cache
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\bin\Debug\net7.0\Conquer the second.exe
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\bin\Debug\net7.0\Conquer the second.deps.json
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\bin\Debug\net7.0\Conquer the second.runtimeconfig.json
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\bin\Debug\net7.0\Conquer the second.dll
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\bin\Debug\net7.0\Conquer the second.pdb
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.dll
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\refint\Conquer the second.dll
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.pdb
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.genruntimeconfig.cache
+C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\ref\Conquer the second.dll
