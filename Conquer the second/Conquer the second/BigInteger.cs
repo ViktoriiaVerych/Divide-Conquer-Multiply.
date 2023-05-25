@@ -267,15 +267,19 @@ public class BigInteger
 
     public BigInteger Multiplication(BigInteger second)
     {
-        var firstArrayLength = _numbers.Length;
-        var secondArrayLength = second._numbers.Length;
+        var firstArrayLength = _numbers.Length; //stores the length
+        var secondArrayLength = second._numbers.Length; //stores the length
+        //extracts 4 digits from _numbers and second._numbers
+        //joins the first two digits into a string and converts them to an integer
         var a = Int32.Parse(string.Join("", _numbers[0], _numbers[1]));
-
         var b = Int32.Parse(string.Join("", _numbers[2], _numbers[3]));
         var c = Int32.Parse(string.Join("", second._numbers[0], second._numbers[1]));
         var d = Int32.Parse(string.Join("", second._numbers[2], second._numbers[3]));
+        //raises 10 to the power of half the length of each array divided by 2,
+        //representing the number of digits in the first half of each number
         var x = Math.Pow(10, firstArrayLength / 2) * a + b;
         var y = Math.Pow(10, secondArrayLength / 2) * c + d;
+        
         var res = x * y;
         return new BigInteger(res.ToString());
     }
