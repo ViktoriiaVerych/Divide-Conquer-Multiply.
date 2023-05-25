@@ -4,11 +4,12 @@ public class BigInteger
 {
     //constructor
     private int[] _numbers; //array of integers, stores individual digits of the big integer
-    
+    private bool _isNegative = false;
+    private bool _isPositive = true;
         public BigInteger(string value)
         {
             int n = 0;
-            if (value != null)
+            if (value != null && !value.Contains('-'))
             {
                 _numbers = new int[value.Length];
                 foreach (var dig in value)
@@ -21,18 +22,45 @@ public class BigInteger
                 }
             }
 
+            else
+            {
+                _isNegative = true;
+                _numbers = new int[value.Length - 1];
+                foreach (var dig in value)
+                {
+                    if (dig == '-')
+                    {
+                        continue;
+                    }
+
+                    _numbers[n] = Int32.Parse(dig.ToString());
+                    n++;
+                }
+            }
+
         }
         public override string ToString() //overrides the default to provide a string of the BigInteger,
                                           //adds all digit in the _numbers array to form a normal number in string representation
         
         {
             var num = "";
+            var negNum = "-";
+            if (_isPositive)
+            {
+                foreach (var dig in _numbers)
+                {
+                    num += dig;
+                }
+
+                return num;
+            }
+            
             foreach (var dig in _numbers)
             {
-                num += dig;
+                negNum += dig;
             }
 
-            return num;
+            return negNum;
         }
         public BigInteger Add(BigInteger another)
         {
