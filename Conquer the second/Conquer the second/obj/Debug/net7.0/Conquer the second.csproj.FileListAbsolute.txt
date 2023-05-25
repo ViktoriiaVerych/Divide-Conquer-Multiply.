@@ -13,3 +13,11 @@ C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conqu
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.pdb
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.genruntimeconfig.cache
 C:\Users\Admin\RiderProjects\Conquer the second\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\ref\Conquer the second.dll
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.csproj.AssemblyReference.cache
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.AssemblyInfoInputs.cache
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.AssemblyInfo.cs
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.csproj.CoreCompileInputs.cache
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.dll
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\refint\Conquer the second.dll
+C:\Users\1\RiderProjects\ConsoleApp9newconquer\Conquer-with-configuration\Conquer the second\Conquer the second\obj\Debug\net7.0\Conquer the second.pdb

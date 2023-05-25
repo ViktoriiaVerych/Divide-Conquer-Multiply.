@@ -114,15 +114,61 @@ public class BigInteger
             //returns a new BigInteger if the current BigInteger has more digits than the another object
             //otherwise, it returns the another itself.
         }
-        
+
         public BigInteger Sub(BigInteger another)
         {
-            // return new BigInteger, result of current - another
-            
-            
-            return (null); //   !!!just for my checking | you can erase it!!!
+            int firstLengthE = _numbers.Length + 1; // Довжина першого масиву з додатковим розрядом
+            int secondLengthE = another._numbers.Length + 1; // Довжина другого масиву з додатковим розрядом
+            int firstArrayLength = _numbers.Length - 1; // Довжина першого масиву без додаткового розряду
+            int secondArrayLength = another._numbers.Length - 1; // Довжина другого масиву без додаткового розряду
+            bool borrow = false; // Флаг позикового додатку (позичення)
+
+            while (firstArrayLength != -1 && secondArrayLength != -1)
+            {
+                if (firstArrayLength >= secondArrayLength)
+                {
+                    int difference = _numbers[firstArrayLength] -
+                                     (borrow
+                                         ? another._numbers[secondArrayLength] + 1
+                                         : another._numbers[secondArrayLength]);
+                    // Віднімаємо відповідні розряди з можливим позиченням
+
+                    if (difference >= 0)
+                    {
+                        _numbers[firstArrayLength] = difference; // Записуємо різницю в перший масив
+                        borrow = false; // Встановлюємо флаг позикового додатку в false
+                    }
+                    else
+                    {
+                        _numbers[firstArrayLength] = difference + 10; // Записуємо різницю + 10 в перший масив
+                        borrow = true; // Встановлюємо флаг позикового додатку в true
+                    }
+                }
+                else
+                {
+                    int difference = (borrow ? _numbers[firstArrayLength] - 1 : _numbers[firstArrayLength]) -
+                                     another._numbers[secondArrayLength];
+                    // Віднімаємо відповідні розряди з можливим позиченням
+
+                    if (difference >= 0)
+                    {
+                        another._numbers[secondArrayLength] = difference; // Записуємо різницю в другий масив
+                        borrow = false; // Встановлюємо флаг позикового додатку в false
+                    }
+                    else
+                    {
+                        another._numbers[secondArrayLength] = difference + 10; // Записуємо різницю + 10 в другий масив
+                        borrow = true; // Встановлюємо флаг позикового додатку в true
+                    }
+                }
+
+                firstArrayLength--; // Зменшуємо індекс першого розряду
+                secondArrayLength--; // Зменшуємо індекс другого розряду
+            }
+
+            return firstArrayLength >= secondArrayLength ? new BigInteger(string.Join("", _numbers)) : another;
+            // Повертаємо новий BigInteger, якщо перший масив має більшу довжину, інакше повертаємо another.
         }
-        
-        
-        
-}
+
+            
+                
