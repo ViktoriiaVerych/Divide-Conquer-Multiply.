@@ -4,6 +4,7 @@ public class BigInteger
 {
     //constructor
     private int[] _numbers; //array of integers, stores individual digits of the big integer
+    private bool _isPositive = true;
     public static BigInteger operator +(BigInteger a, BigInteger b) => a.Add(b);
     public static BigInteger operator -(BigInteger a, BigInteger b) => a.Sub(b);
   
@@ -143,58 +144,171 @@ public class BigInteger
 
     public BigInteger Sub(BigInteger another)
     {
-        int firstLengthE = _numbers.Length + 1; // Довжина першого масиву з додатковим розрядом
-        int secondLengthE = another._numbers.Length + 1; // Довжина другого масиву з додатковим розрядом
-        int firstArrayLength = _numbers.Length - 1; // Довжина першого масиву без додаткового розряду
-        int secondArrayLength = another._numbers.Length - 1; // Довжина другого масиву без додаткового розряду
-        bool borrow = false; // Флаг позикового додатку (позичення)
+        int firstArrayLenght = _numbers.Length - 1;
+        int secondArrayLenght = another._numbers.Length - 1;
 
-        while (firstArrayLength != -1 && secondArrayLength != -1)
+        if (firstArrayLenght > secondArrayLenght)
         {
-            if (firstArrayLength >= secondArrayLength)
-            {
-                int difference = _numbers[firstArrayLength] -
-                                 (borrow
-                                     ? another._numbers[secondArrayLength] + 1
-                                     : another._numbers[secondArrayLength]);
-                // Віднімаємо відповідні розряди з можливим позиченням
+            while (firstArrayLenght != -1 && secondArrayLenght != -1)
 
-                if (difference >= 0)
+            {
                 {
-                    _numbers[firstArrayLength] = difference; // Записуємо різницю в перший масив
-                    borrow = false; // Встановлюємо флаг позикового додатку в false
+                    var subtraction = _numbers[firstArrayLenght] - another._numbers[secondArrayLenght];
+                    if (subtraction >= 0)
+                    {
+                        _numbers[firstArrayLenght] = subtraction;
+                    }
+                    else
+                    {
+                        if (_numbers[firstArrayLenght] != 0)
+                        {
+                            _numbers[firstArrayLenght - 1] -= 1;
+                            var df = 10 + _numbers[firstArrayLenght];
+                            df -= another._numbers[secondArrayLenght];
+                            _numbers[firstArrayLenght] = df;
+                        }
+                        else
+                        {
+                            while (true)
+                            {
+                                var thisCounter = 0;
+                                foreach (var i in _numbers.Reverse())
+                                {
+                                    if (i != 0)
+                                    {
+                                        var df = 10 + _numbers[firstArrayLenght];
+                                        df -= another._numbers[secondArrayLenght];
+                                        _numbers[firstArrayLenght] = df;
+                                    }
+                                    thisCounter++;
+                                    if (firstArrayLenght - thisCounter < 0)
+                                    {
+                                        continue;
+                                    }
+                                    if (_numbers[firstArrayLenght - thisCounter] == 0)
+                                    {
+                                        _numbers[firstArrayLenght - thisCounter] = 9;
+                                    }
+                                    else
+                                    {
+                                        _numbers[firstArrayLenght - thisCounter] -= 1;
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+                    firstArrayLenght--;
+                    secondArrayLenght--;
+                }
+            }
+
+            return new BigInteger(string.Join("", _numbers));
+        }
+        
+  
+        if (firstArrayLenght == secondArrayLenght && _numbers[0] > another._numbers[0])
+        {
+            while (firstArrayLenght != -1 && secondArrayLenght != -1)
+            {
+                var sub = _numbers[firstArrayLenght] - another._numbers[secondArrayLenght];
+                if (sub >= 0)
+                {
+                    _numbers[firstArrayLenght] = sub;
                 }
                 else
                 {
-                    _numbers[firstArrayLength] = difference + 10; // Записуємо різницю + 10 в перший масив
-                    borrow = true; // Встановлюємо флаг позикового додатку в true
+                    _numbers[firstArrayLenght - 1] -= 1;
+                    var df = 10 + _numbers[firstArrayLenght];
+                    df -= another._numbers[secondArrayLenght];
+                    _numbers[firstArrayLenght] = df;
                 }
+                firstArrayLenght--;
+                secondArrayLenght--;
             }
-            else
+            return new BigInteger(string.Join("", _numbers));
+        }
+        if (firstArrayLenght == secondArrayLenght && _numbers[0] < another._numbers[0])
+        {
+            var tempArray1 = _numbers;
+            var tempArray2 = another._numbers;
+            _numbers = tempArray1;
+            another._numbers = tempArray2;
+            while (firstArrayLenght != -1 && secondArrayLenght != -1)
             {
-                int difference = (borrow ? _numbers[firstArrayLength] - 1 : _numbers[firstArrayLength]) -
-                                 another._numbers[secondArrayLength];
-                // Віднімаємо відповідні розряди з можливим позиченням
-
-                if (difference >= 0)
+                var subtraction = _numbers[firstArrayLenght] - another._numbers[secondArrayLenght];
+                if (subtraction >= 0)
                 {
-                    another._numbers[secondArrayLength] = difference; // Записуємо різницю в другий масив
-                    borrow = false; // Встановлюємо флаг позикового додатку в false
+                    _numbers[firstArrayLenght] = subtraction;
                 }
                 else
                 {
-                    another._numbers[secondArrayLength] = difference + 10; // Записуємо різницю + 10 в другий масив
-                    borrow = true; // Встановлюємо флаг позикового додатку в true
+                    _numbers[firstArrayLenght - 1] -= 1;
+                    var df = 10 + _numbers[firstArrayLenght];
+                    df -= another._numbers[secondArrayLenght];
+                    _numbers[firstArrayLenght] = df;
                 }
+                firstArrayLenght--;
+                secondArrayLenght--;
             }
-
-            firstArrayLength--; // Зменшуємо індекс першого розряду
-            secondArrayLength--; // Зменшуємо індекс другого розряду
         }
 
-        return firstArrayLength >= secondArrayLength ? new BigInteger(string.Join("", _numbers)) : another;
-        // Повертаємо новий BigInteger, якщо перший масив має більшу довжину, інакше повертаємо another.
+        var result = new BigInteger(string.Join("", _numbers))
+        {
+            _isPositive = false
+        };
+        return result;
     }
+        
+    
+// //---------------------------------------------------------------------------
+//         
+//         {
+//             if (firstArrayLength >= secondArrayLength)
+//             {
+//                 int difference = _numbers[firstArrayLength] -
+//                                  (borrow
+//                                      ? another._numbers[secondArrayLength] + 1
+//                                      : another._numbers[secondArrayLength]);
+//                 // Віднімаємо відповідні розряди з можливим позиченням
+//
+//                 if (difference >= 0)
+//                 {
+//                     _numbers[firstArrayLength] = difference; // Записуємо різницю в перший масив
+//                     borrow = false; // Встановлюємо флаг позикового додатку в false
+//                 }
+//                 else
+//                 {
+//                     _numbers[firstArrayLength] = difference + 10; // Записуємо різницю + 10 в перший масив
+//                     borrow = true; // Встановлюємо флаг позикового додатку в true
+//                 }
+//             }
+//             else
+//             {
+//                 int difference = (borrow ? _numbers[firstArrayLength] - 1 : _numbers[firstArrayLength]) -
+//                                  another._numbers[secondArrayLength];
+//                 // Віднімаємо відповідні розряди з можливим позиченням
+//
+//                 if (difference >= 0)
+//                 {
+//                     another._numbers[secondArrayLength] = difference; // Записуємо різницю в другий масив
+//                     borrow = false; // Встановлюємо флаг позикового додатку в false
+//                 }
+//                 else
+//                 {
+//                     another._numbers[secondArrayLength] = difference + 10; // Записуємо різницю + 10 в другий масив
+//                     borrow = true; // Встановлюємо флаг позикового додатку в true
+//                 }
+//             }
+//
+//             firstArrayLength--; // Зменшуємо індекс першого розряду
+//             secondArrayLength--; // Зменшуємо індекс другого розряду
+//         }
+//
+//         return firstArrayLength >= secondArrayLength ? new BigInteger(string.Join("", _numbers)) : another;
+//         // Повертаємо новий BigInteger, якщо перший масив має більшу довжину, інакше повертаємо another.
+//     }
 
 
     public BigInteger Multiplication(BigInteger second)
