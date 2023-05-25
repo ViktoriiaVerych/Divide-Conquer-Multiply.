@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\RiderProjects\\ConsoleApp9newconquer\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
       "projectName": "Conquer the second",
-      "projectPath": "C:\\Users\\1\\RiderProjects\\ConsoleApp9newconquer\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\RiderProjects\\ConsoleApp9newconquer\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\Conquer the second.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\RiderProjects\\Conquer the second\\Conquer-with-configuration\\Conquer the second\\Conquer the second\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
