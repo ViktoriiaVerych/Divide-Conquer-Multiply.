@@ -1,4 +1,7 @@
 ﻿namespace Conquer_the_second;
+using System.Numerics;
+
+
 
 public class BigInteger
 {
@@ -293,4 +296,4 @@ public class BigInteger
 
 
             
-                
+                              
