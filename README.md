@@ -6,13 +6,13 @@ In this project, our goal is to implement a BigInteger class and integrate it in
 
 In this project, our primary objective is to create a powerful numerical tool that can handle arithmetic operations involving extremely large numbers – far beyond the capacities of standard data types. To achieve this, we will introduce a custom BigInteger class and integrate it seamlessly into a console program. Moreover, we will employ the Karatsuba multiplication algorithm to optimize the multiplication of these large integers.
 
-**BigInteger Class:**
+### BigInteger Class:
 Our custom BigInteger class will serve as the foundation for managing large numbers. It will allow us to perform addition and subtraction operations on integers of virtually any size. This class will be equipped with methods to initialize, manipulate, and output these BigIntegers. Furthermore, it will play a pivotal role in realizing the efficient Karatsuba multiplication.
 
-**Karatsuba Multiplication Algorithm:**
+### Karatsuba Multiplication Algorithm:
 The Karatsuba algorithm is a powerful technique for multiplying large integers more efficiently than traditional methods. It leverages a divide-and-conquer strategy to split the numbers into smaller parts and then combines the results to obtain the final product. By recursively applying this algorithm, we can reduce the number of multiplications required, resulting in a significant reduction in computational complexity.
 
-**Console Program Integration:**
+## Console Program Integration:
 We will extend our existing console calculator to seamlessly incorporate the BigInteger class and the Karatsuba multiplication algorithm. Users will have the freedom to input large numbers and choose arithmetic operations. The program will intelligently apply the Karatsuba algorithm when multiplication is invoked, ensuring rapid and accurate results for extensive numerical computations.
 
 ## Project Overview:
