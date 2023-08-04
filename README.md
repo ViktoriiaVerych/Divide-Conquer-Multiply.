@@ -26,5 +26,7 @@ We will extend our existing console calculator to seamlessly incorporate the Big
 
 By the end of this project, our console program will be equipped with the ability to perform arithmetic operations on large numbers using the Karatsuba multiplication algorithm. This newfound capability will provide users with a versatile tool for tackling complex numerical computations that were previously hindered by the limitations of conventional data types.
 
+## Assignment 5 Description:
+https://github.com/kse-ua/algorithms/blob/main/assignments_2023/assignment_6.md
 
 
